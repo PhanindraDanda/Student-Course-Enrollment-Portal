@@ -1,0 +1,38 @@
+<section class="h-20 gradient-custom"></section>
+
+  <div id="courseList" class="album py-5 bg-light">
+    <figure class="text-center py-5">
+        <blockquote class="blockquote">
+          <h2 class="album-title">My Learnings</h2>
+        </blockquote>
+      </figure>
+   
+      <div id="courseList" class="album py-2 bg-light" *ngIf="courseList.getValue()?.length !==0; else message;">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col" *ngFor="let item of courseList.getValue()">
+                <app-course [course]="item" [isHome]=false></app-course>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <ng-template #message> 
+      
+      <div class="container text-center space-2 space-3--lg">
+        <div class="w-md-80 w-lg-60 text-center mx-md-auto">
+          <div class="mb-5">
+            <span class="u-icon u-icon--secondary u-icon--lg rounded-circle mb-4">
+              <span class="fa fa-shopping-bag u-icon__inner"></span>
+            </span>
+            <h2 class="h2">You have no Active Courses</h2>
+            <p>Please click below to Explore Available Course that suits your needs.</p>
+          </div>
+          <a class="btn btn-primary btn-wide" [routerLink]="['/home']">Buy Course</a>
+        </div>
+      </div>
+
+    </ng-template>
+
+    </div>
+ 

@@ -1,0 +1,17 @@
+svg{
+    vertical-align: -webkit-baseline-middle;
+}
+  .text-small {
+    font-size: 85%;
+  }
+  
+  .dropdown-toggle {
+    outline: 0;
+  }
+
+  .cart
+  {
+    color: black;
+    background-color: lavender;
+  }
+  

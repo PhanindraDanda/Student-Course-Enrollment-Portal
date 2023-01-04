@@ -1,0 +1,20 @@
+<div class="card shadow-sm">
+    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{course?.imageUrl}}"/>
+    <div class="card-body flex-fill">
+       <h5 class="card-title">{{course?.courseTitle}}</h5> 
+      <p class="card-text">{{course?.description}}</p>
+      <div class="d-flex justify-content-between align-items-center" *ngIf="paymentstatus.getValue() === 'unpaid'">
+        <small class="text-dark fw-bolder">SGD {{course?.cost}}</small>
+        <div class="btn-group">
+            <button *ngIf="isButtonClicked.getValue() === false" (click)="setValue()" type="button" class="btn btn-primary">Add to Cart</button>
+            <button *ngIf="isButtonClicked.getValue() === true" type="button" class="btn btn-primary" [routerLink]="['/cart']">Go to Cart</button>
+          </div>
+      </div>
+      <div class="d-flex justify-content-between align-items-center" *ngIf="paymentstatus.getValue() === 'paid'">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" [routerLink]="['/my-courses']">Go to Course</button>
+          </div>
+      </div>
+      
+    </div>
+  </div>

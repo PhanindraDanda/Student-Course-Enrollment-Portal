@@ -1,0 +1,16 @@
+.cover
+{
+    background-image: url('../../../assets/cover.jpg');
+    background-repeat: no-repeat;
+    padding-top: 11rem!important;
+    padding-bottom: 5rem!important;
+}
+.cover-section
+{
+    padding-top: 5rem!important;
+    background-color: aliceblue;
+}
+.album-title
+{
+    font-family: Times, "Times New Roman", Georgia, serif;
+}
